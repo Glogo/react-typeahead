@@ -303,7 +303,8 @@ var Typeahead = React.createClass({
       return this.props.onKeyDown(event);
     }
     // Don't propagate the keystroke back to the DOM/browser
-    event.preventDefault();
+    // MG: (hotfix) Commented out to enable tab char on input
+    // event.preventDefault();
   },
 
   componentWillReceiveProps: function(nextProps) {
